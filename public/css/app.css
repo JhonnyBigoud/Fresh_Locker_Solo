@@ -1,20 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
-/*  font-family: 'Poppins', sans-serif; */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-*, body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Ajouts */ 
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
-li {
-    list-style: none;
+* {
+	box-sizing: border-box;
 }
+
+/* RESET CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+/*  font-family: 'Poppins', sans-serif; */
+
 
 body {
     display: flex;
@@ -250,6 +304,94 @@ header img {
     padding: 16px;
 }
 
+/* FOOTER */
+
+footer {
+    display: flex;
+    background-color: bisque;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--main-green);
+    color: var(--secondary-orange);
+
+ 
+}
+
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    margin: 10px;
+    margin-top: 25px;
+}
+
+.footer-item img {
+    height: 48px;
+}
+footer h3 {
+    position: relative;
+    color: var(--secondary-green);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 8px auto;
+    margin-bottom: 20px;
+}
+
+footer h3::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    display: inline-block;
+    background-color: var(--main-orange);
+    width: 45px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+footer li {
+    padding: 20px 5px;
+}
+
+.social-media-container a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media-container a img {
+    padding-right: 10px;
+}
+
+.social-container1,
+.social-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+
+}
+
+.social-container1 {
+    background: url(../image/logo_facebook.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-container2 {
+    background: url(../image/logo_twitter.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* FIN FOOTER  */
+
 /* Média queries mobile */
 @media screen and (max-width: 769px) {
     .desktop {
@@ -266,7 +408,14 @@ header img {
     .nav-mobile li {
         font-size: 16px;
     }
+
+    /* footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    } */
 }
+/* FIN */
 
 /* Média queries desktop/tablette */
 
@@ -279,4 +428,23 @@ header img {
         padding: 15px;
     }
 }
-/* Fin */
+/* FIN */
+
+
+/* BREAKPOINT FOOTER */
+@media screen and (max-width: 620px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 880px){
+    footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/* FIN */
