@@ -6,11 +6,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+#[Route('', name: 'main_')]
+
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'main_index')]
+    #[Route('/', name: 'index')]
     public function index(): Response
     {
         return $this->render('main/index.html.twig');
+    }
+
+    #[Route('/produits', name: 'products')]
+    public function products(): Response
+    {
+        return $this->render('main/products_page.html.twig');
     }
 }
