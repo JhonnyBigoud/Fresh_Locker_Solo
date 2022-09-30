@@ -1,50 +1,74 @@
 <header>
-    <div class="main-header">
-        <div class="burger-container">
-            <button class="nav-toggler" aria-label="toggle curtain navigation"> 
-                    <span class="linespan l1"></span>
-                    <span class="linespan l2"></span>
-                    <span class="linespan l3"></span>
-            </button>
+    <div class="header-container">
+
+        <div class="burger-container mobile">
+                    <button class="nav-toggler" aria-label="toggle curtain navigation"> 
+                            <span class="linespan l1"></span>
+                            <span class="linespan l2"></span>
+                            <span class="linespan l3"></span>
+                    </button>
         </div>
 
         <div class="logo-container">
-                <img class="logo-mobile" src="{{asset('image/logo-white-lain-max.png')}}" alt="">
-                <img class="logo-desktop" src="{{asset('image/logo-flat-min.png')}}" alt="">
+            <img class="mobile" src="{{asset('image/logo-white-flat-min.png')}}" alt="">
+            <img class="desktop" src="{{asset('image/logo-white-lain-max.png')}}" alt="">
         </div>
-        <div class="icon-container">
-            <a href="">
-                <i class="fa-solid fa-user"></i>
-            </a>
-            <a href="">
-                <i class="fa-solid fa-basket-shopping"></i>
-            </a>
-                    {# <img src="{{asset('image/user.svg')}}" alt="">
-                    <img src="{{asset('image/shopping.svg')}}" alt=""> #}
+
+        <div class="input-search-desk desktop">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Rechercher...">
         </div>
+
+        <div class="logo-container2">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+
     </div>
 
-    <nav class="nav-container">
-        <div class="search-input">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Rechercher...">
-        </div>
+{# Nav petit écran #}
+
+    <nav class="nav-mobile mobile">
+            <div class="input-search-mobile">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <ul>
+                <li>
+                    <a href="">Accueil</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    <a href="">Produits</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    <a href="">A propos</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+            </ul>
+    </nav>
+
+{# Nav grand écran #}
+
+    <nav class="nav-desk desktop">
         <li>
-            <a href="">Accueil</a>
-            <i class="fa-solid fa-chevron-right"></i>
+            <a href="">ACCUEIL</a>
         </li>
         <li>
-            <a href="">Produits</a>
-            <i class="fa-solid fa-chevron-right"></i>
+            <a href="">PRODUITS</a>
         </li>
         <li>
-            <a href="">A propos</a>
-            <i class="fa-solid fa-chevron-right"></i>
+            <a href="">A PROPOS</a>
         </li>
         <li>
-            <a href="">Contact</a>
-            <i class="fa-solid fa-chevron-right"></i>
+            <a href="">CONTACT</a>
         </li>
     </nav>
-    
+
+
 </header>

@@ -1,7 +1,7 @@
 // Burger button/menu
 
 const hamburgerButton = document.querySelector(".nav-toggler");
-const navigation = document.querySelector(".nav-container");
+const navigation = document.querySelector(".nav-mobile");
 
 hamburgerButton.addEventListener("click", toggleNav)
 
