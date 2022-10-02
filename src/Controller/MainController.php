@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
-    #[Route('/', name: 'index')]
+    #[Route('/index', name: 'index')]
     public function index(): Response
     {
         return $this->render('main/index.html.twig');
@@ -20,5 +20,17 @@ class MainController extends AbstractController
     public function products(): Response
     {
         return $this->render('main/products_page.html.twig');
+    }
+
+    #[Route('/about', name: 'about')]
+    public function about(): Response
+    {
+        return $this->render('main/about.html.twig');
+    }
+
+    #[Route('/contact', name: 'contact')]
+    public function contact(): Response
+    {
+        return $this->render('main/contact.html.twig');
     }
 }

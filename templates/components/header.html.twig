@@ -35,19 +35,19 @@
             </div>
             <ul>
                 <li>
-                    <a href="">Accueil</a>
+                    <a href="{{ path('main_index') }}">Accueil</a>
                     <i class="fa-solid fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a href="">Produits</a>
+                    <a href="{{ path('product_list') }}">Produits</a>
                     <i class="fa-solid fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a href="">A propos</a>
+                    <a href="{{ path('main_about')}}">A propos</a>
                     <i class="fa-solid fa-chevron-right"></i>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="{{ path('main_contact')}}">Contact</a>
                     <i class="fa-solid fa-chevron-right"></i>
                 </li>
             </ul>
@@ -57,16 +57,16 @@
 
     <nav class="nav-desk desktop">
         <li>
-            <a href="">ACCUEIL</a>
+            <a href="{{ path('main_index') }}">ACCUEIL</a>
         </li>
         <li>
-            <a href="">PRODUITS</a>
+            <a href="{{ path('product_list') }}">PRODUITS</a>
         </li>
         <li>
-            <a href="">A PROPOS</a>
+            <a href="{{ path('main_about')}}">A PROPOS</a>
         </li>
         <li>
-            <a href="">CONTACT</a>
+            <a href="{{ path('main_contact')}}">CONTACT</a>
         </li>
     </nav>
 
