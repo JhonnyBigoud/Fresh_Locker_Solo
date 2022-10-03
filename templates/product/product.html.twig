@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="{{ asset('css/product_page.css')}}">
+<link rel="stylesheet" href="{{ asset('css/product/product_list.css')}}">
 {% endblock %}
 {% block javascripts %}
 {% endblock %}
@@ -15,9 +15,18 @@
 <section class="products-container">
     <article class="product-card">
         <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
                 <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-basket-shopping icon1"></i>
+                </a>
+                <a href="">
+                    {# <i class="fa-solid fa-trash-can"></i> #}
+                </a>
+                <a href="">
+                    {# <i class="fa-solid fa-circle-plus"></i> #}
+                </a>
+                <a href="">
+                    {# <i class="fa-solid fa-circle-minus"></i> #}
                 </a>
         </div>
         <div class="description-container">
@@ -36,399 +45,50 @@
             </div>
         </div>
     </article>
+
+
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+                <a href="">
+                    {# <i class="fa-solid fa-basket-shopping"></i> #}
+                </a>
+                <a href="">
+                    {# <i class="fa-solid fa-trash-can icon2"></i> #}
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-circle-plus icon3"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-circle-minus icon4"></i>
+                </a>
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
 
 {# Articles à supprimer #}
 {# ----------------------------------------------------------- #}
-
-        <article class="product-card">
+    <article class="product-card">
         <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
                 <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-            <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-            <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-            <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-            <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-            <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                </a>
-        </div>
-        <div class="description-container">
-            <div class="description">
-                <div class="producer">
-                    <p>Producteur</p>
-                </div>
-                <div class="produit">
-                    <p>Nom produit/article</p>
-                </div>
-            </div>
-            <div class="prices">
-                <span>00.00€/kg</span>
-                <span>0kg</span>
-                <span>Total</span>
-            </div>
-        </div>
-    </article>
-
-        <article class="product-card">
-        <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
-                <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-trash-can icon2"></i>
                 </a>
         </div>
         <div class="description-container">
@@ -450,9 +110,114 @@
 
     <article class="product-card">
         <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
                 <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-trash-can icon2"></i>
                 </a>
         </div>
         <div class="description-container">
@@ -474,9 +239,114 @@
 
     <article class="product-card">
         <div class="img-container">
-            <img src="{{ asset('images/products/Aubergines 1kg.jpeg')}}" alt="">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
                 <a href="">
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-trash-can icon2"></i>
                 </a>
         </div>
         <div class="description-container">
@@ -495,6 +365,113 @@
             </div>
         </div>
     </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card">
+        <div class="img-container">
+            <img src="{{ asset('image/products/Aubergines 1kg.jpeg')}}" alt="">
+        </div>
+        <div class="description-container">
+            <div class="description">
+                <div class="producer">
+                    <p>Producteur</p>
+                </div>
+                <div class="produit">
+                    <p>Nom produit/article</p>
+                </div>
+            </div>
+            <div class="prices">
+                <span>00.00€/kg</span>
+                <span>0kg</span>
+                <span>Total</span>
+            </div>
+        </div>
+    </article>
+
+            
 {# ----------------------------------------------------------- #}
 {# Fin articles à supprimer  #}
 </section>

@@ -3,6 +3,73 @@
 {% block title %}	Accueil - {{parent()}}
 {% endblock %}
 
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/homepage.css')}}">
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
 {% block body %}
+
+<div class="main-container1"></div>
+
+<div class="main-container2">
+    <h2>Nos catégories</h2>
+
+    <div class="product-card">
+        <h3>Catégorie</h3>
+    </div>
+</div>
+
+<div class="main-container3">
+    <div class="subcontainer3">
+        <h3>Nos engagements</h3>
+        <ul>
+            <li>
+                <div class="title-container3">
+                    <i class="fa-regular fa-snowflake"></i>
+                    <h4>Frais</h4>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus dolore blanditiis numquam dolor eligendi? Deserunt, molestiae delectus.</p>
+                <ul class="li2">
+                    <li>-> Casier réfrigéré</li>
+                    <li>-> Produits de saison</li>
+                    <li>-> Produits bio et de qualité</li>
+                </ul>
+            </li>
+            <li>
+                <div class="title-container3">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Local</h4>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus dolore blanditiis numquam dolor eligendi? Deserunt, molestiae delectus.</p>
+                <ul class="li2">
+                    <li>-> Participation à l'économie locale</li>
+                    <li>-> Juste rémunération des producteurs</li>
+                    <li>-> Partenariat durable</li>
+                </ul>
+            </li>
+            <li>
+                <div class="title-container3">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h4>Accessible</h4>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus dolore blanditiis numquam dolor eligendi? Deserunt, molestiae delectus.</p>
+                <ul class="li2">
+                    <li>-> Proximité urbaine</li>
+                    <li>-> Réseau étendu de hubs</li>
+                    <li>-> 7-77ans</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-container4">
+
+</div>
+
+<div class="main-container5"></div>
 
 {% endblock %}

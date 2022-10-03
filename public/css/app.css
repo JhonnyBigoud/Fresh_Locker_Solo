@@ -1,82 +1,5 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
-body {
-	line-height: 1;
-}
-
-ol, ul, li {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Ajouts */ 
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-/* RESET CSS */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
 /*  font-family: 'Poppins', sans-serif; */
-
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-}
-
 
 /*  Variables */  
 
@@ -94,9 +17,18 @@ body {
  /* Classe activated pour lien nav */
 .activated {
     background-color: var(--secondary-orange);
+    color: var(--main-green);
 }
 
  /*  */
+
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
 header {
 
     display: flex;
@@ -128,22 +60,78 @@ header img {
     justify-content: center;
 }
 
+.logo-container2 ul {
+    display: flex;
+}
+
 .logo-container2  i {
     color: var(--white);
     font-size: 40px;
     padding: 10px;
     padding-right: 30px;
+}
+.logo-container2 li {
+    position: relative;
+}
 
+
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.sub-menu li {
+    position: relative;
+    right: 40px;
+    background-color: #156350;
+    color: var(--white);
+    padding: 19px 14px;
+}
+
+.sub-menu a {
+    padding: 19px 14px;
+}
+
+.sub-menu li:hover {
+    color: var(--main-green);
+    background-color: var(--secondary-orange);
+}
+
+.sub-menu li:first-child {
+    margin-top: 16px;
+}
+
+header li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub-menu li:nth-child(2) {
+    border-radius: 0 0 10px 10px;
 }
 
 .input-search-desk {
     color: var(--white);
     outline: none;
-    border-bottom: solid 2px var(--grey);
+    border-bottom: solid 2px var(--white);
     display: flex;
     max-width: 320px;
 }
 
+.input-search-desk i {
+    position: relative;
+    top: 5px;
+    font-size: 1.3rem;
+}
+
+.input-search-desk input::placeholder {
+    color: rgb(230, 230, 230);
+}
 .input-search-mobile {
     position: relative;
     top: 25px;
@@ -162,27 +150,20 @@ header img {
     padding: 5px;
     color: var(--white);
     outline: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
 }
 
-.input-search-desk input::placeholder {
-    color: var(--grey);
-}
 
+.input-search-desk input:-webkit-input-placeholder {
+    color: var(--white);
+}
 
 
 main {
     flex-grow: 1;
     min-height: 50px;
 }
-
-
-
-
-
-
-
-
-
 
 nav li a {
     padding: 20px;
@@ -275,6 +256,7 @@ nav li a {
 
 .nav-mobile a {
     color: var(--black);
+    border-radius: 4px;
 }
 
 .nav-mobile input {
@@ -312,15 +294,18 @@ nav li a {
 
 footer {
     display: flex;
-    background-color: bisque;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: var(--main-green);
-    color: var(--secondary-orange);
-
- 
+    color: var(--white);
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
 .footer-item {
     display: flex;
@@ -331,9 +316,12 @@ footer {
     margin-top: 25px;
 }
 
-.footer-item img {
-    height: 48px;
+
+
+.footer-item i {
+    font-size: 2rem;
 }
+
 footer h3 {
     position: relative;
     color: var(--secondary-green);
@@ -361,12 +349,11 @@ footer li {
 
 .social-media-container a{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.social-media-container a img {
-    padding-right: 10px;
+.social-media-container p {
+    padding-left: 10px;
 }
 
 .social-container1,
@@ -393,7 +380,15 @@ footer li {
     background-position: center;
 }
 
+.footer-item a:hover {
+    color: var(--secondary-orange)
+}
 
+.copyright {
+    background-color: black;
+    text-align: center;
+    padding: 10px 0px;
+}
 /* FIN FOOTER  */
 
 /* Média queries mobile */
@@ -413,7 +408,6 @@ footer li {
         font-size: 16px;
     }
 
-    
 }
 /* FIN */
 
@@ -444,7 +438,7 @@ footer li {
 
 /* BREAKPOINT FOOTER */
 @media screen and (max-width: 620px) {
-    footer {
+    .footer-container {
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -460,7 +454,7 @@ footer li {
 }
 
 @media screen and (min-width: 620px) and (max-width: 880px){
-    footer {
+    .footer-container {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
