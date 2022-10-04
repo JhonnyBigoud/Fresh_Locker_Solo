@@ -20,6 +20,43 @@
     color: var(--main-green);
 }
 
+/* Buttons */ 
+
+.btn /* structure */ {
+    display: inline-block;
+    padding: 12px 28px;
+
+    font-size: 1.1rem;
+    color: var(--black);
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.btn-primary /* color */ {
+    background-color: var(--main-orange);
+    box-shadow: inset 0 1px 10px #F7C15A;
+}
+
+.btn-primary:hover {
+    color: var(--main-green);
+    background-color: #F5B131;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
  /*  */
 
  body {
