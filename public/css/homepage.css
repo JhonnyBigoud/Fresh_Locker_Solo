@@ -9,11 +9,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .main-container2 {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.category-container {
+    width: 275vw;
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
@@ -38,14 +45,28 @@ h2 {
 
 .category-card {
     position: relative;
-    width: 250px;
+    min-width: 250px;
     height: 385px;
     background-color: #f1f1f1;
-    margin: 30px auto 120px;
+    margin: 30px 20px 120px;
     border-radius: 10px;
-    background-image: url(../image/category/categorie-viande-bis.jpg);
     background-size: contain;
 }
+
+.fruit-card {
+    background-image: url(../image/category/categorie-fruits.jpg);    
+}
+
+.vegetable-card {
+    background-image: url(../image/category/categorie-legumes.jpg);
+}
+.fish-card {
+    background-image: url(../image/category/categorie-poissons-bis.jpg);
+}
+.meat-card {
+    background-image: url(../image/category/categorie-viande-bis.jpg);
+}
+
 
 .main-container3 {
     display: flex;
@@ -88,6 +109,7 @@ h2 {
 .main-container3 p {
     font-size: 18px;
     font-weight: 300;
+    max-width: 700px;
 }
 
 .title-container3 {
@@ -109,7 +131,7 @@ h2 {
 }
 
 .main-container3 .btn {
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 215px;
 }
 
@@ -126,7 +148,6 @@ h2 {
 .category-btn {
     color: white;
     background-color: var(--secondary-green);
-    width: 140px;
     height: 350px;
     border-radius: 10px;
     margin: 30px;
@@ -136,10 +157,161 @@ h2 {
     font-size: 6rem;
 }
 
+
 .product-card {
+    display: flex;
+    flex-direction: column;
     width: 230px;
     height: 350px;
     border-radius: 10px;
+    background-color: white;
     box-shadow: 0px 0px 5px 2px rgb(204, 204, 204);
-    margin: 30px;
+    margin: 0px 25px;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    position: absolute;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    top: 70%;
+}
+
+.icon1 {
+    right: 30px;
+    background-color: var(--main-orange);
+}
+
+.icon2 {
+    right: 130px;
+    background-color: var(--black);
+}
+
+.icon3 {
+    right: 30px;
+    background-color: var(--main-orange);
+}
+
+.icon4 {
+    right: 130px;
+    background-color: var(--mint-blue);
+}
+
+.img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 60%;
+}
+.img-container img {
+    object-fit: contain;
+    width: 75%;
+}
+.prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.description-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producer,
+.prices {
+    font-size: 12px;
+}
+
+.prices :nth-child(3) {
+    font-size: 18px;
+}
+.prices :nth-child(2) {
+    padding-left: 50px;
+}
+
+.product-card p,
+.product-card span  {
+    padding: 5px;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.main-container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-orange);
+}
+
+.main-container5 h2{
+    text-align: center;
+}
+
+.comments {
+    max-width: 85%;
+}
+.main-container5 .comments p {
+    font-weight: 400;
+    text-align: justify;
+}
+.main-container5 p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.comment-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-title span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.notation {
+    padding: 10px 20px;
+}
+
+.notation i {
+    color: var(--white);
+    background-color: var(--secondary-green);
+    padding: 4px;
+}
+.main-container5 .comments .comment-title p{
+    font-weight: 600;
+}
+
+.username {
+    margin-left: 20px;
+    font-style: italic;
+}
+
+.trustpilot {
+    display: flex;
+    align-items: center;
+}
+
+.trustpilot p {
+    padding: 20px 10px;
+}
+
+.trustpilot i {
+    font-size: 2rem;
+    color: var(--secondary-green);
 }
