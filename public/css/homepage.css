@@ -1,7 +1,3 @@
-body {
-    width: 100vw;
-}
-
 .main-container1 {
     width: 100%;
     height: 450px;
@@ -9,7 +5,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow-x: scroll;
     white-space: nowrap;
 }
 
@@ -18,11 +13,11 @@ body {
     object-fit: cover;
 }
 .main-container2 {
-    overflow-x: scroll;
+    overflow: auto;
     white-space: nowrap;
 }
 .category-container {
-    width: 275vw;
+    width: fit-content;
     display: flex;
     align-items: center;
 }
@@ -91,8 +86,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
 
+.subcontainer3 img {
+    height: 250px;
+}
 .main-container3 h3 {
     font-size: 30px;
     font-weight: 600;
@@ -140,13 +139,13 @@ h2 {
 }
 
 .main-container4 {
-    overflow-x: scroll;
+    overflow: auto;
     white-space: nowrap;
 }
 .product-container {
-    width: 600vw;
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .category-btn {
@@ -320,7 +319,23 @@ h2 {
     color: var(--secondary-green);
 }
 
+@media screen and (min-width: 600px) {
+    .category-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
 
+@media screen and (min-width: 768px) {
+    .subcontainer3 ul {
+        display: flex;
+    }
+
+    .li2 {
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 1600px) {
     .main-container1 {
