@@ -1,96 +1,34 @@
 <header>
-    <div class="header-container">
-
-        <div class="burger-container mobile">
-                    <button class="nav-toggler" aria-label="toggle curtain navigation"> 
-                            <span class="linespan l1"></span>
-                            <span class="linespan l2"></span>
-                            <span class="linespan l3"></span>
-                    </button>
-        </div>
-
-        <div class="logo-container">
-        <a href="{{ path('main_index')}}">
-            <img class="mobile" src="{{asset('image/logo/logo-white-flat-min.png')}}" alt="">
-        </a>
-        <a href="{{ path('main_index')}}">
-            <img class="desktop" src="{{asset('image/logo/logo-white-lain-max.png')}}" alt="">
-        </a>
-        </div>
-
-        <div class="input-search-desk desktop">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Inspecter le potager ...">
-        </div>
-
-        <div class="logo-container2">
-        <ul>
+    <nav>
+        <ul class="nav d-flex">
             <li>
-            <a>
-                <i class="fa-solid fa-user user-button"></i>
-            </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="">Connexion</a>
-                    </li>
-                    <li>
-                        <a href="">Inscription</a>
-                    </li>
-                </ul>
+                <a class="nav-link" href="{{ path('main_index') }}">Accueil</a>
             </li>
             <li>
-                <i class="fa-solid fa-basket-shopping basket">
-                    <span> 5 </span>
-                </i>
+                <a class="nav-link" href="{{ path('product_list') }}">Nos produits</a>
+            </li>
+            {% if app.user %} {# Si connecté #}
+            <li>
+                <span class="nav-link"> {{ app.user.firstname }} </span>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ path('account_index') }}">Mon compte</a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ path('user_logout') }}">Déconnexion</a>
+            </li>
+            {% else %} {# Sinon #}
+            <li>
+                <a class="nav-link" href="{{ path('user_register') }}">Inscription</a>
+            </li>
+            <li>
+                <a class="nav-link" href="{{ path('user_login') }}">Connexion</a>
+            </li>
+            {% endif %}
+            <li>
+                <a class="nav-link" href="{{ path('cart_index') }}">Panier</a>
             </li>
         </ul>
-        </div>
-
-    </div>
-
-{# Nav petit écran #}
-
-    <nav class="nav-mobile mobile">
-            <div class="input-search-mobile">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Rechercher...">
-            </div>
-            <ul>
-                <li>
-                    <a href="{{ path('main_index') }}">Accueil</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li>
-                    <a href="{{ path('product_list') }}">Produits</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li>
-                    <a href="{{ path('main_about')}}">A propos</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li>
-                    <a href="{{ path('main_contact')}}">Contact</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-            </ul>
     </nav>
-
-{# Nav grand écran #}
-
-    <nav class="nav-desk desktop">
-        <li>
-            <a href="{{ path('main_index') }}">ACCUEIL</a>
-        </li>
-        <li>
-            <a href="{{ path('product_list') }}">PRODUITS</a>
-        </li>
-        <li>
-            <a href="{{ path('main_about')}}">A PROPOS</a>
-        </li>
-        <li>
-            <a href="{{ path('main_contact')}}">CONTACT</a>
-        </li>
-    </nav>
-
-
 </header>
+

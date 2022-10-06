@@ -14,12 +14,11 @@ function toggleNav() {
 
 // Navigation active
 const activePage = window.location.pathname;
-console.log(activePage);
-
-const navLinks = document.querySelectorAll('nav a').forEach(link => {
-    if(link.href.includes(`${activePage}`)) {
+const flQuerySelector = activePage === '/' ? '.fl__home' : 'nav a';
+document.querySelectorAll(`${flQuerySelector}`).forEach(link => {
+    if (link.href.includes(`${activePage}`)) {
         link.classList.add('activated');
     }
-})
+});
 
 // Fin navigation 

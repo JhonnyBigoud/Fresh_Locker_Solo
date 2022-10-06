@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -14,8 +16,26 @@ class Product
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'products')]
+    private Collection $category;
+
+    #[ORM\ManyToMany(targetEntity: Stock::class, inversedBy: 'products')]
+    private Collection $stock;
+
+    #[ORM\ManyToMany(targetEntity: Conditioning::class, inversedBy: 'products')]
+    private Collection $conditioning;
+
+    #[ORM\OneToMany(mappedBy: 'product', targetEntity: Producer::class)]
+    private Collection $producers;
+
     #[ORM\Column(length: 50)]
-    private ?string $name = null;
+    private ?string $label = null;
+
+    #[ORM\Column(length: 50)]
+    private ?string $alias = null;
+
+    #[ORM\Column(type: Types::DECIMAL, precision: 6, scale: 2)]
+    private ?string $unitPrice = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
@@ -23,25 +43,141 @@ class Product
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $photo = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 6, scale: 2)]
-    private ?string $unitPrice = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $conversionFactor = null;
+    public function __construct()
+    {
+        $this->category = new ArrayCollection();
+        $this->stock = new ArrayCollection();
+        $this->conditioning = new ArrayCollection();
+        $this->producers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    /**
+     * @return Collection<int, Category>
+     */
+    public function getCategory(): Collection
     {
-        return $this->name;
+        return $this->category;
     }
 
-    public function setName(string $name): self
+    public function addCategory(Category $category): self
     {
-        $this->name = $name;
+        if (!$this->category->contains($category)) {
+            $this->category->add($category);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Category $category): self
+    {
+        $this->category->removeElement($category);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Stock>
+     */
+    public function getStock(): Collection
+    {
+        return $this->stock;
+    }
+
+    public function addStock(Stock $stock): self
+    {
+        if (!$this->stock->contains($stock)) {
+            $this->stock->add($stock);
+        }
+
+        return $this;
+    }
+
+    public function removeStock(Stock $stock): self
+    {
+        $this->stock->removeElement($stock);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Conditioning>
+     */
+    public function getConditioning(): Collection
+    {
+        return $this->conditioning;
+    }
+
+    public function addConditioning(Conditioning $conditioning): self
+    {
+        if (!$this->conditioning->contains($conditioning)) {
+            $this->conditioning->add($conditioning);
+        }
+
+        return $this;
+    }
+
+    public function removeConditioning(Conditioning $conditioning): self
+    {
+        $this->conditioning->removeElement($conditioning);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Producer>
+     */
+    public function getProducers(): Collection
+    {
+        return $this->producers;
+    }
+
+    public function addProducer(Producer $producer): self
+    {
+        if (!$this->producers->contains($producer)) {
+            $this->producers->add($producer);
+            $producer->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProducer(Producer $producer): self
+    {
+        if ($this->producers->removeElement($producer)) {
+            // set the owning side to null (unless already changed)
+            if ($producer->getProduct() === $this) {
+                $producer->setProduct(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
+    }
+
+    public function setLabel(string $label): self
+    {
+        $this->label = $label;
+
+        return $this;
+    }
+
+    public function getUnitPrice(): ?string
+    {
+        return $this->unitPrice;
+    }
+
+    public function setUnitPrice(string $unitPrice): self
+    {
+        $this->unitPrice = $unitPrice;
 
         return $this;
     }
@@ -70,26 +206,22 @@ class Product
         return $this;
     }
 
-    public function getUnitPrice(): ?string
+    /**
+     * Get the value of alias
+     */ 
+    public function getAlias()
     {
-        return $this->unitPrice;
+        return $this->alias;
     }
 
-    public function setUnitPrice(string $unitPrice): self
+    /**
+     * Set the value of alias
+     *
+     * @return  self
+     */ 
+    public function setAlias($alias)
     {
-        $this->unitPrice = $unitPrice;
-
-        return $this;
-    }
-
-    public function getConversionFactor(): ?string
-    {
-        return $this->conversionFactor;
-    }
-
-    public function setConversionFactor(string $conversionFactor): self
-    {
-        $this->conversionFactor = $conversionFactor;
+        $this->alias = $alias;
 
         return $this;
     }
