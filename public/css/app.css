@@ -122,8 +122,8 @@ header img {
     right: 40px;
     background-color: #156350;
     color: var(--white);
-    padding: 19px 14px;
-    width: 145px;
+    padding: 19px 0px;
+    width: 125px;
 }
 
 .sub-menu a {

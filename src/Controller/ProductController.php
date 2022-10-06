@@ -32,10 +32,10 @@ class ProductController extends AbstractController
     #[Route('/{alias}', name: 'single')]
     public function single(Product $product = null): Response
     {
-        if ($product === null) {
-            // Modifier par un message d'erreur en cas de produit non trouvé (ou qui n'existe plus)
-            dd('PRODUIT NULL');
-        }
+        // if ($product === null) {
+        //     // Modifier par un message d'erreur en cas de produit non trouvé (ou qui n'existe plus)
+        //     dd('PRODUIT NULL');
+        // }
 
         return $this->render('product/single.html.twig', [
             'product' => $product

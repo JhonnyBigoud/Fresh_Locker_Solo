@@ -22,12 +22,12 @@
                 <span>Comment s'y prendre:</span>
                 <ol>
                     <li>1 - Je localise mon hub</li>
-                    <li>2-  Je passe commande avant 16h00</li>
+                    <li>2- Je passe commande avant 16h00</li>
                     <li>3 - Je récupère ma commande dans la journée</li>
                 </ol>
                 <div class="info-input">
-                <input type="text" name="" id="" placeholder="Inscris ton adresse postale">
-                <a href="">Je géolocalise mon Fwesh-Locker</a>
+                    <input type="text" name="" id="" placeholder="Inscris ton adresse postale">
+                    <a href="">Je géolocalise mon Fwesh-Locker</a>
                 </div>
             </div>
         </div>
@@ -117,102 +117,43 @@
             <button class="btn category-btn">
                 <i class="fa-solid fa-carrot"></i>
             </button>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
-                        </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
-                        </div>
+
+            {% for product in legume.products %}
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="{{ asset('images/' ~ legume.alias ~ '/mini/' ~ product.photo) }}"
+                             alt="Photo du produit {{ product.label }}">
+                        <a href="">
+                            <i class="fa-solid fa-basket-shopping icon1"></i>
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-trash-can"></i> #}
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-circle-plus"></i> #}
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-circle-minus"></i> #}
+                        </a>
                     </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
+                    <div class="description-container">
+                        <div class="description">
+                            <div class="producer">
+                                <p>Producteur</p>
+                            </div>
+                            <div class="produit">
+                                <p>{{ product.label }}</p>
+                            </div>
                         </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
+                        <div class="prices">
+                            <span>00.00€/kg</span>
+                            <span>0kg</span>
+                            <span>Total</span>
                         </div>
                     </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
-                        </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
-                        </div>
-                    </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
+                </article>
+            {% endfor %}
+
         </section>
     </div>
     <hr>
@@ -223,134 +164,41 @@
             <button class="btn category-btn">
                 <i class="fa-solid fa-apple-whole"></i>
             </button>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
-                        </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
-                        </div>
+            {% for product in fruit.products %}
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="{{ asset('images/' ~ fruit.alias ~ '/mini/' ~ product.photo) }}"
+                             alt="Photo du produit {{ product.label }}">
+                        <a href="">
+                            <i class="fa-solid fa-basket-shopping icon1"></i>
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-trash-can"></i> #}
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-circle-plus"></i> #}
+                        </a>
+                        <a href="">
+                            {# <i class="fa-solid fa-circle-minus"></i> #}
+                        </a>
                     </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
+                    <div class="description-container">
+                        <div class="description">
+                            <div class="producer">
+                                <p>Producteur</p>
+                            </div>
+                            <div class="produit">
+                                <p>{{ product.label }}</p>
+                            </div>
                         </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
+                        <div class="prices">
+                            <span>00.00€/kg</span>
+                            <span>0kg</span>
+                            <span>Total</span>
                         </div>
                     </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
-                        </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
-                        </div>
-                    </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
-            <article class="product-card">
-                <div class="img-container">
-                    <img src="{{ asset('image/products/Aubergines 1kg.jpeg') }}" alt="">
-                    <a href="">
-                        <i class="fa-solid fa-basket-shopping icon1"></i>
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-trash-can"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-plus"></i> #}
-                    </a>
-                    <a href="">
-                        {# <i class="fa-solid fa-circle-minus"></i> #}
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="description">
-                        <div class="producer">
-                            <p>Producteur</p>
-                        </div>
-                        <div class="produit">
-                            <p>Nom produit/article</p>
-                        </div>
-                    </div>
-                    <div class="prices">
-                        <span>00.00€/kg</span>
-                        <span>0kg</span>
-                        <span>Total</span>
-                    </div>
-                </div>
-            </article>
+                </article>
+            {% endfor %}
         </section>
     </div>
     <hr>
@@ -492,7 +340,7 @@
         </section>
     </div>
     <hr>
-    
+
     <div class="main-container4">
 
         <section class="product-container">
@@ -647,10 +495,12 @@
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="comment-title">
-                    <p>Super concept !</p>
+                    <p>Du beurre dans les épinards</p>
                     <span>Il y a 3 jours</span>
                 </div>
-                <p>J'ai testé plusieurs fois FreshLocker et franchement leurs légumes sont à tomber dans les pommes. Et j'ajouterais que les fruits ne comptent pas pour des prunes. Les prix sont tellement compétitifs qu'ils sont abordables même quand on n'a pas un radis. Un conseil, ramenez votre fraise !!!</p>
+                <p>J'ai testé plusieurs fois FreshLocker et franchement leurs légumes sont à tomber (dans les pommes). Et
+                    j'ajouterai que les fruits ne comptent pas pour des prunes. Les prix sont tellement compétitifs
+                    qu'ils sont abordables même quand on n'a pas un radis. Un conseil, ramenez votre fraise !!!</p>
                 <span class="username">Véronique</span>
             </div>
 
@@ -660,14 +510,15 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
                 <div class="comment-title">
-                    <p>Trop de la balle !</p>
-                    <span>Il y a 3 jours</span>
+                    <p>Ça donne la pêche !</p>
+                    <span>Il y a 5 jours</span>
                 </div>
-                <p>Depuis que j'ai essayé FreshLocker, j'adore qu'on me raconte des salades, c'est dingue ! Je dirais preque que j'aime me faire carotter :o A consommer sans modération !!!</p>
-                <span class="username">Alphonse</span>
+                <p>Depuis que j'ai essayé FreshLocker, j'adore qu'on me raconte des salades, c'est dingue ! Je dirais
+                    preque que j'aime me faire carotter :o A consommer sans modération !!!</p>
+                <span class="username">Isidor Ange</span>
             </div>
 
             <div class="comments desktop">
@@ -679,12 +530,11 @@
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="comment-title">
-                    <p>J'aime la viande !</p>
+                    <p>Les yeux en amande</p>
                     <span>Il y a 3 jours</span>
                 </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, illum. Quae, iste maiores. Quasi id, ex
-                    repellendus libero nemo eius obcaecati iste, deleniti fuga a non blanditiis laudantium.</p>
-                <span class="username">Bobby</span>
+                <p>Marre des vendeurs à la noix ? Vous en avez gros sur la patate ? Ne vous prenez plus le chou à chercher de la qualité. Avec FreshLocker, on a la banane ! Et pour cause, tous nos produtis sont certifiés bio et de qualité supérieure. Cerise sur le gâteau, vous trouverez forcément un locker près de chez vous !!!</p>
+                <span class="username">Cho. Arty</span>
             </div>
         </section>
         <div class="trustpilot">
