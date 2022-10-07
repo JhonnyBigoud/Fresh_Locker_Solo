@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Inscription - {{ parent() }} {% endblock %}
+
+{% block body %}
+
+    <h1>Inscription</h1>
+
+        {{ form_start(form) }}
+
+        {{ form_row(form.lastname )}}
+        {{ form_row(form.firstname )}}
+        {{ form_row(form.email )}}
+        {{ form_row(form.plainPassword )}}
+        {{ form_row(form.phoneNumber )}}
+
+        {{ form_row(form.agreeTerms )}}
+        
+        {{ form_end(form) }}
+
+{% endblock %}
