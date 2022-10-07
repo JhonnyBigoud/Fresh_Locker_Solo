@@ -1,0 +1,98 @@
+<header id="top">
+    <div class="header-container">
+
+        <div class="burger-container mobile">
+            <button class="nav-toggler" aria-label="toggle curtain navigation">
+                <span class="linespan l1"></span>
+                <span class="linespan l2"></span>
+                <span class="linespan l3"></span>
+            </button>
+        </div>
+
+        <div class="logo-container">
+            <a href="{{ path('main_index') }}">
+                <img class="mobile" src="{{ asset('image/logo/logo-white-flat-min.png') }}" alt="">
+            </a>
+            <a href="{{ path('main_index') }}">
+                <img class="desktop" src="{{ asset('image/logo/logo-white-lain-max.png') }}" alt="">
+            </a>
+        </div>
+
+        <div class="input-search-desk desktop">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Inspecter le potager ...">
+        </div>
+
+        <div class="logo-container2">
+            <ul>
+                <li>
+                    <a>
+                        <i class="fa-solid fa-user user-button"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li>
+                                <a href="{{ path('user_login') }}">Connexion</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_register') }}">Inscription</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <span> {{ app.user.firstname }} </span>
+                            </li>
+                            <li>
+                                <a href="{{ path('account_index') }}">Mon compte</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_logout') }}">Déconnexion</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li>
+                    <i class="fa-solid fa-basket-shopping basket">
+                        <span> 5 </span>
+                    </i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    {# Nav petit écran #}
+    <nav class="nav-mobile mobile">
+        <div class="input-search-mobile">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Rechercher...">
+        </div>
+        <ul>
+            {% include 'components/_nav.html.twig' %}
+        </ul>
+    </nav>
+
+    {# Nav grand écran #}
+    <nav class="nav-desk desktop">
+        {% include 'components/_nav.html.twig' %}
+    </nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
