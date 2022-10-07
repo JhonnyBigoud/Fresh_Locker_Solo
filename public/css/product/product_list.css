@@ -21,6 +21,49 @@ h1 {
     letter-spacing: 1px;
 }
 
+.filter-container {
+    max-width: 80%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    margin: 15px;
+}
+
+form input {
+    height: 40px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    font-size: 1.3rem;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background-color: var(--main-orange);
+    margin: 20px auto;
+    border: solid 2px transparent;
+    transition: background-color 0.4s ease-in, border 0.4s ease-in;
+}
+
+.btn-filter:hover {
+    border: solid 2px var(--main-orange);
+    background-color: var(--white);
+}
+
 .img-container img {
     width: 80%;
     height: 100%;
@@ -226,5 +269,11 @@ h1 {
     }
     .icon4 {
         right: 70px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    form > div {
+        flex-direction: column;
     }
 }

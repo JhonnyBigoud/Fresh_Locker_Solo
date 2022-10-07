@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+    font-size: max(30px, 2.5vw);
+    margin: 30px auto;
+}
+
 .single-card {
     display: flex;
     flex-direction: column;
@@ -17,13 +23,14 @@
     height: 260px;
     border-radius: 16px;
     object-position: center;
-    margin-top: 30px;
+    margin: 30px;
     object-fit: cover;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .single-card button {
-    margin: 30px auto;
+    margin: 20px;
+    margin-right: 3vw;
 }
 
 .single-card button i {
@@ -44,7 +51,8 @@
 }
 .add-button {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    align-items: center;
 }
 
 .add-button span {

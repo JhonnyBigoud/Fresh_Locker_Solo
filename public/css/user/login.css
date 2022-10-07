@@ -35,7 +35,7 @@ form input {
     border-radius: 15px;
     outline: none;
     max-width: 500px;
-
+    padding: 10px;
 }
 
 form button {

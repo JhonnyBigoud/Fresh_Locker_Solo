@@ -25,8 +25,9 @@ form div {
 form input {
     width: 100%;
     min-height: 50px;
-    border: solid 1.5px gray;
+    border: solid 2px gray;
     border-radius: 15px;
+    padding: 10px;
 }
 
 form label {
@@ -69,6 +70,3 @@ form button {
     }
 }
 
-/* 
-
-{# En cochant cette case, je reconnais avoir pris connaissance des Conditions Générales d'Utilisation du site ainsi que sa Politique de Confidentialité et je les accepte.  #} */

@@ -52,7 +52,7 @@ class RegisterType extends AbstractType
                     ],
                 ])
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => 'En cochant cette case, j’accepte les CGV/CGU... blabla RGPD',
+                'label' => 'En cochant cette case, je reconnais avoir pris connaissance des Conditions Générales d\'Utilisation du site ainsi que sa Politique de Confidentialité et je les accepte.',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
