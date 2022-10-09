@@ -67,5 +67,8 @@ td {
     .container2 {
         margin-left: 4vw;
     }
-}
+    .container ul li {
+        font-size: 1.4rem;
+    }
 
+}
