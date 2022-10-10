@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Mes adresses - {{parent()}} {% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/address/address_add.css')}}">
+{% endblock  %}
+
+{% block body %}
+
+    <h1>Mon compte</h1>
+    <div class="container">
+        <ul class="nav nav-tabs d-flex">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('account_index') }}">Tableau de bord</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('address_list') }}">Mes adresses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#locker">Mon FreshLocker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#orders">Mes commandes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#infos">Mes infos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_logout') }}">Déconnexion</a>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Ajouter une adresse</h2>
+
+<div class="container2">
+    {{ include('address/form.html.twig') }}
+
+</div>
+<div class="btn-container">
+    <a class="btn btn-outline-secondary" href="{{ path('address_list') }}">Retour</a>
+</div>
+
+{% endblock %}

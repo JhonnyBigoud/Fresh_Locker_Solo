@@ -1,0 +1,20 @@
+h1 {
+    font-size: 3rem;
+    margin: 30px;
+    margin-top: 100px;
+}
+
+main p {
+    padding: 10px 30px;
+}
+
+
+main p:last-child {
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+}
