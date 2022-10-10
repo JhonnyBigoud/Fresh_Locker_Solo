@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Mes adresses - {{parent()}} {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/address/address_list.css')}}">
+{% endblock  %}
+
+{% block body %}
+
+    <h1>Mon compte</h1>
+  
+    <div class="container">
+        <ul class="nav nav-tabs d-flex">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('account_index') }}">Tableau de bord</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{ path('address_list') }}">Mes adresses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#locker">Mon FreshLocker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#orders">Mes commandes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#infos">Mes infos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_logout') }}">Déconnexion</a>
+            </li>
+        </ul>
+    
+    <div class="container2">
+    <h2>Mes adresses</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="event-number">Numéro</th>
+                <th class="event-wording">Libellé</th>
+                <th class="event-postal-code">Code postal</th>
+                <th class="event-city">Ville</th>
+                <th class="event-country">Pays</th>
+                <th class="event-delete"></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        {% for address in addresses %}
+            <tr>
+                <td data-label="Numéro">{{ address.number }}</td>
+                <td data-label="wording">{{ address.streetName }}</td>
+                <td data-label="postal-code">{{ address.postCode }}</td>
+                <td data-label="city">{{ address.city }}</td>
+                <td data-label="country">{{ address.country }}</td>
+                <td data-label="delete">
+                    <form method="post" action="{{ path('address_remove', {'id': address.id}) }}" 
+                    onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ address.id) }}">
+                        <button class="btn btn-danger">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Vous n'avez pas encore enregistré d'adresse postale.</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    </div>
+
+<div class="btn-container">
+    <a class="btn btn-primary" href="{{ path('address_add') }}">Create new</a>
+</div>
+{% endblock %}
