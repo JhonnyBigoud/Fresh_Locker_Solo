@@ -424,7 +424,9 @@ h2 {
         width: 100%;
         margin: 30px auto;
     }
-
+    .anchor {
+        right: 3%;
+    }
 }
 
 @media screen and (min-width: 768px) {
