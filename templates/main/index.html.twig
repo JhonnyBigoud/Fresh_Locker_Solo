@@ -9,9 +9,8 @@
 {% block body %}
 
     <div class="main-container1">
-        {# <img src="{{ asset('images/bg/green-cabbage-in-garden.jpg') }}" alt=""> #}
         <div class="information">
-            <h3>Be Radis ?</h3>
+            <h3 id="top">Be Radis ?</h3>
             <div>
                 <p>Je demande à Roger ce qu'il a fait pousser... Et plus qu'à le récupérer !</p>
                 <p>Les meilleurs produits issus de nos campagnes,<br>
@@ -475,7 +474,11 @@
             <a href="{{ path('product_list') }}" class="btn btn-primary">
                 Voir tous nos produits
             </a>
+            <a href="#top">
+                <i class="fa-solid fa-arrow-up anchor"></i>
+            </a>
     </div>
+
 
     <div class="main-container5">
         <h2>Votre avis compte pour nous !</h2>
